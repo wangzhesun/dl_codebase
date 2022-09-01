@@ -142,3 +142,4 @@ dmypy.json
 .pyre/
 
 .idea
+./save_voc2012_split*

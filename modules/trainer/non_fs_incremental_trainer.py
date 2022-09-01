@@ -316,8 +316,8 @@ class non_fs_incremental_trainer(non_fs_sequential_GIFS_seg_trainer):
                     self.partial_data_pool[novel_obj_id] = []
 
                 self.partial_data_pool[novel_obj_id].append((img_roi, mask_roi))
-            print('number of pool data for current class {}: {}'.format(novel_obj_id, len(
-                self.partial_data_pool[novel_obj_id])))
+            # print('number of pool data for current class {}: {}'.format(novel_obj_id, len(
+            #     self.partial_data_pool[novel_obj_id])))
 
         self.backbone_net.train()
         self.post_processor.train()
