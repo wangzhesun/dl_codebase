@@ -143,3 +143,4 @@ dmypy.json
 
 .idea
 save_voc2012_split2_non_fs/*
+save_voc2012_split3_non_fs/*
