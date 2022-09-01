@@ -142,4 +142,4 @@ dmypy.json
 .pyre/
 
 .idea
-./save_voc2012_split*
+save_voc2012_split2_non_fs/
