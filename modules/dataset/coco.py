@@ -76,6 +76,10 @@ class COCOSeg(datasets.vision.VisionDataset):
             img_id = self.img_ids[i]
             mask = self._get_mask(img_id)
             contained_labels = torch.unique(mask)
+            ############################################
+            print('printing contained labels: ')
+            print(contained_labels)
+            ############################################
             for c in contained_labels:
                 c = int(c)
                 if c == 0 or c == -1:
