@@ -80,6 +80,11 @@ class COCOSeg(datasets.vision.VisionDataset):
                 c = int(c)
                 if c == 0 or c == -1:
                     continue # background or ignore_mask
+                ###################################################################
+                print('printing c and i: ')
+                print(c)
+                print(i)
+                ####################################################################
                 instance_class_map[c].append(str(i)) # use string to format integer to write to txt
         
         for c in range(1, 81):
@@ -95,9 +100,9 @@ class COCOSeg(datasets.vision.VisionDataset):
     def _get_mask(self, img_id):
         img_desc = self.coco.imgs[img_id]
         img_fname = img_desc['file_name']
+        ##################################
         # label_fname = img_fname.replace('.jpg', '.png')
         # img_fpath = os.path.join(self.img_dir, label_fname)
-        ##################################
         img_fpath = os.path.join(self.img_dir, img_fname)
         ##################################
         return self._get_seg_mask(img_fpath)
