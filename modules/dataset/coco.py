@@ -81,6 +81,10 @@ class COCOSeg(datasets.vision.VisionDataset):
             print(contained_labels)
             ############################################
             for c in contained_labels:
+                ##################################3333
+                if c not in range(0,81):
+                    continue
+                ######################################
                 c = int(c)
                 if c == 0 or c == -1:
                     continue # background or ignore_mask
