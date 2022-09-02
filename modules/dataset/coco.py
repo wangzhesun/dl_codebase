@@ -95,7 +95,7 @@ class COCOSeg(datasets.vision.VisionDataset):
     def _get_mask(self, img_id):
         img_desc = self.coco.imgs[img_id]
         img_fname = img_desc['file_name']
-        label_fname = img_fname.replace('.jpg', '.png')
+        # label_fname = img_fname.replace('.jpg', '.png')
         img_fpath = os.path.join(self.img_dir, label_fname)
         return self._get_seg_mask(img_fpath)
     
