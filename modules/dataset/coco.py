@@ -75,6 +75,8 @@ class COCOSeg(datasets.vision.VisionDataset):
         for i in trange(len(self)):
             img_id = self.img_ids[i]
             mask = self._get_mask(img_id)
+            print('printing masks: ')
+            print(mask)
             contained_labels = torch.unique(mask)
             ############################################
             print('printing contained labels: ')
@@ -126,7 +128,7 @@ class COCOSeg(datasets.vision.VisionDataset):
         raw_lbl = np.array(Image.open(fname)).astype(np.int)
         ignore_idx = (raw_lbl == 255)
         ########################################
-        # raw_lbl += 1
+        raw_lbl += 1
         ###########################################
         raw_lbl[raw_lbl > 91] = 0 # STUFF classes are mapped to background
         for d_idx in deleted_idx:
