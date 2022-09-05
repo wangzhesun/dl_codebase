@@ -101,23 +101,26 @@ class sequential_GIFS_seg_trainer(GIFS_seg_trainer):
 
         ###############################################################
         classwise_iou, mean_pixel_acc = self.eval_on_loader(self.continual_test_loader,
-                                                            num_classes=21,
+                                                            num_classes=total_num_classes,
                                                             masked_class=None)
 
-        # learned_novel_class_idx = sorted(list(range(16, 21)))
-        # learned_novel_class_idx = sorted(list(range(11, 16)))
-        folding = self.cfg.DATASET.PASCAL5i.folding
+        ### learned_novel_class_idx = sorted(list(range(16, 21)))
+        ### learned_novel_class_idx = sorted(list(range(11, 16)))
 
-        if folding == 0:
-            learned_novel_class_idx = sorted(list(range(1, 6)))
-        elif folding == 1:
-            learned_novel_class_idx = sorted(list(range(6, 11)))
-        elif folding == 2:
-            learned_novel_class_idx = sorted(list(range(11, 16)))
-        else:
-            learned_novel_class_idx = sorted(list(range(16, 21)))
 
-        base_class_idx = self.train_set.dataset.visible_labels
+        # folding = self.cfg.DATASET.PASCAL5i.folding
+        #
+        # if folding == 0:
+        #     learned_novel_class_idx = sorted(list(range(1, 6)))
+        # elif folding == 1:
+        #     learned_novel_class_idx = sorted(list(range(6, 11)))
+        # elif folding == 2:
+        #     learned_novel_class_idx = sorted(list(range(11, 16)))
+        # else:
+        #     learned_novel_class_idx = sorted(list(range(16, 21)))
+
+        # base_class_idx = self.train_set.dataset.visible_labels
+        base_class_idx = self.vanilla_base_class_idx
         if 0 not in base_class_idx:
             base_class_idx.append(0)
         base_class_idx = sorted(base_class_idx)
