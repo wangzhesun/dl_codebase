@@ -26,8 +26,8 @@ class GIFS_seg_trainer(seg_trainer):
 
 
         #########################################################################
-        print('length of test set')
-        print(len(self.continual_test_set))
+        # print('length of test set')
+        # print(len(self.continual_test_set))
         # print('\n printing max and min index 0 and 1 test image: ')
         # print(self.continual_aug_train_set[0][0].size())
         # print(self.continual_aug_train_set[1][0].size())
