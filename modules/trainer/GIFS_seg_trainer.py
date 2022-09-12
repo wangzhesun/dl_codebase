@@ -26,18 +26,20 @@ class GIFS_seg_trainer(seg_trainer):
 
 
         #########################################################################
-        print('\n printing max and min index 0 and 1 test image: ')
-        print(self.continual_aug_train_set[0][0].size())
-        print(self.continual_aug_train_set[1][0].size())
-        print(torch.max(self.continual_aug_train_set[0][0]))
-        print(torch.min(self.continual_aug_train_set[0][0]))
-        print(self.continual_aug_train_set[0][0].is_cuda)
-        print('\n printing max and min index 0 and 1 test label: ')
-        print(self.continual_aug_train_set[0][1].size())
-        print(self.continual_aug_train_set[1][1].size())
-        print(torch.max(self.continual_aug_train_set[0][1]))
-        print(torch.min(self.continual_aug_train_set[0][1]))
-        print(self.continual_aug_train_set[0][1].is_cuda)
+        print('length of test set')
+        print(len(self.continual_test_set))
+        # print('\n printing max and min index 0 and 1 test image: ')
+        # print(self.continual_aug_train_set[0][0].size())
+        # print(self.continual_aug_train_set[1][0].size())
+        # print(torch.max(self.continual_aug_train_set[0][0]))
+        # print(torch.min(self.continual_aug_train_set[0][0]))
+        # print(self.continual_aug_train_set[0][0].is_cuda)
+        # print('\n printing max and min index 0 and 1 test label: ')
+        # print(self.continual_aug_train_set[0][1].size())
+        # print(self.continual_aug_train_set[1][1].size())
+        # print(torch.max(self.continual_aug_train_set[0][1]))
+        # print(torch.min(self.continual_aug_train_set[0][1]))
+        # print(self.continual_aug_train_set[0][1].is_cuda)
         #########################################################################
 
         self.continual_test_loader = torch.utils.data.DataLoader(self.continual_test_set,
