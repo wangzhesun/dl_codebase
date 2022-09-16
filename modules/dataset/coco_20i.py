@@ -76,10 +76,10 @@ class COCO20iReader(torchvision.datasets.vision.VisionDataset):
         self.subset_idx = sorted(self.subset_idx)
 
         #########################################################
-        print('print size of COCO dataset: ')
-        print(len(self.vanilla_ds))
-        print('print size of training dataset: ')
-        print(len(self.subset_idx))
+        # print('print size of COCO dataset: ')
+        # print(len(self.vanilla_ds))
+        # print('print size of training dataset: ')
+        # print(len(self.subset_idx))
         ##########################################################
 
 
