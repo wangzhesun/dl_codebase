@@ -75,6 +75,14 @@ class COCO20iReader(torchvision.datasets.vision.VisionDataset):
         # Sort subset idx to make dataset deterministic (because set is unordered)
         self.subset_idx = sorted(self.subset_idx)
 
+        #########################################################
+        print('print size of COCO dataset: ')
+        print(len(self.vanilla_ds))
+        print('print size of training dataset: ')
+        print(len(self.subset_idx))
+        ##########################################################
+
+
         # Generate self.class_map
         self.class_map = {}
         for c in range(1, 81):
