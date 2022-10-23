@@ -9,6 +9,7 @@
 *.jpg
 *.png
 *.jpeg
+*.pth
 
 # Jupyter Notebook
 .ipynb_checkpoints
@@ -139,4 +140,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-.idea/*
+
+.idea
