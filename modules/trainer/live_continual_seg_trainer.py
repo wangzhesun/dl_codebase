@@ -118,7 +118,7 @@ class live_continual_seg_trainer(seg_trainer):
         np.random.shuffle(obj_scene_pair_list)
         for (canonical_obj_name, scene_name) in obj_scene_pair_list:
             # for canonical_obj_name in interest_obj_list:
-            potential_ann_dir = f'/data/ICRA2023/provided_masks/{canonical_obj_name}'
+            potential_ann_dir = f'/root/autodl-tmp/data/scannet/provided_masks/{canonical_obj_name}'
             if os.path.exists(potential_ann_dir):
                 all_anno_list = os.listdir(potential_ann_dir)
             else:
