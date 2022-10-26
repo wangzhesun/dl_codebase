@@ -121,8 +121,10 @@ class live_continual_seg_trainer(seg_trainer):
             potential_ann_dir = f'/root/autodl-tmp/data/scannet/provided_masks/{canonical_obj_name}'
             if os.path.exists(potential_ann_dir):
                 all_anno_list = os.listdir(potential_ann_dir)
+                print('mask found')
             else:
-                # print(potential_ann_dir)
+                print('mask not found')
+                print(potential_ann_dir)
                 all_anno_list = []
             # for scene_name in obj_scene_map[canonical_obj_name]:
             num_clicks_spent[scene_name] = 0
