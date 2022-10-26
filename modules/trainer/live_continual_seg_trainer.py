@@ -687,7 +687,9 @@ class live_continual_seg_trainer(seg_trainer):
                 all_anno_list = []
             # for scene_name in obj_scene_map[canonical_obj_name]:
             num_clicks_spent[scene_name] = 0
-            my_seq_reader = scannet_scene_reader("/media/roger/My Book/data/scannet_v2", scene_name,
+            # my_seq_reader = scannet_scene_reader("/media/roger/My Book/data/scannet_v2", scene_name,
+            #                                      canonical_obj_name)
+            my_seq_reader = scannet_scene_reader("/root/autodl-tmp/data/scannet", scene_name,
                                                  canonical_obj_name)
             print(f"Working on scene name {scene_name} with {len(my_seq_reader)} frames")
             print(f"Object adapting: {canonical_obj_name}")
