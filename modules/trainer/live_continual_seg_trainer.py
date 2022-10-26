@@ -122,6 +122,7 @@ class live_continual_seg_trainer(seg_trainer):
             if os.path.exists(potential_ann_dir):
                 all_anno_list = os.listdir(potential_ann_dir)
             else:
+                print(potential_ann_dir)
                 all_anno_list = []
             # for scene_name in obj_scene_map[canonical_obj_name]:
             num_clicks_spent[scene_name] = 0
