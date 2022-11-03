@@ -794,7 +794,7 @@ class live_continual_seg_trainer(seg_trainer):
             fp_cnt = 0
             tn_cnt = 0
             fn_cnt = 0
-            save_base_dir = f"/data/ICRA2023/gaps_vos_prob_map/{canonical_obj_name}/{scene_name}"
+            save_base_dir = f"/root/autodl-tmp/data/scannet/gaps_vos_prob_map/{canonical_obj_name}/{scene_name}"
             os.makedirs(save_base_dir, exist_ok=True)
             vos_goodview_flag = False
             for i in trange(len(my_seq_reader)):
@@ -1014,7 +1014,7 @@ class live_continual_seg_trainer(seg_trainer):
         inter = None
         union = None
         for obj in interest_obj_list:  # interest_obj_list
-            obj_folder = f'/data/ICRA2023/val_images/{obj}'
+            obj_folder = f'/root/autodl-tmp/data/scannet/val_images/{obj}'
             rgb_image_fn_list = [i for i in os.listdir(obj_folder) if i.endswith('rgb.jpg')]
             for rgb_fn in rgb_image_fn_list:
                 rgb_path = os.path.join(obj_folder, rgb_fn)
