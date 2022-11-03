@@ -1071,7 +1071,7 @@ class live_continual_seg_trainer(seg_trainer):
 
     def adaptation_no_simulation(self):
         generated_mask_dir = '/root/autodl-tmp/data/scannet/provided_masks_everything'
-        with open('data_order.pkl', 'rb') as f:
+        with open('metadata/data_order.pkl', 'rb') as f:
             data_meta_records = pickle.load(f)
         metadata_to_path_dict = {}
         obj_list = os.listdir(generated_mask_dir)
