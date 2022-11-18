@@ -70,7 +70,8 @@ TASK_SPECIFIC:
     sequential_dataset_num_classes: 5
     baseset_type: 'random'
     probabilistic_synthesis_strat: 'vRFS'
-    num_runs: 5
+#    num_runs: 5
+    num_runs: 3
 
 # PIFS
 # TASK_SPECIFIC:
