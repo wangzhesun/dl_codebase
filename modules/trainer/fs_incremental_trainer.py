@@ -34,6 +34,8 @@ class kd_criterion(nn.Module):
 
 # memory_bank_size = 500
 memory_bank_size = 100
+print('memory bank size: ')
+print(memory_bank_size)
 
 class fs_incremental_trainer(sequential_GIFS_seg_trainer):
     def __init__(self, cfg, backbone_net, post_processor, criterion, dataset_module, device):
