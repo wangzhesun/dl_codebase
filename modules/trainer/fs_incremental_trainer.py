@@ -33,7 +33,7 @@ class kd_criterion(nn.Module):
         return -torch.mean(element_wise_loss)
 
 # memory_bank_size = 500
-memory_bank_size = 100
+memory_bank_size = 200
 print('memory bank size: ')
 print(memory_bank_size)
 
